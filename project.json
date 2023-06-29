@@ -1,5 +1,5 @@
 {
-  "name": "org",
+  "name": "watch-ui",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./src",
   "projectType": "application",
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/org"
+        "outputPath": "dist/watch-ui"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "org:build"
+        "buildTarget": "watch-ui:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "org:build:development",
+          "buildTarget": "watch-ui:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "org:build:production",
+          "buildTarget": "watch-ui:build:production",
           "hmr": false
         }
       }
@@ -41,23 +41,23 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "org:build"
+        "buildTarget": "watch-ui:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "org:build:development"
+          "buildTarget": "watch-ui:build:development"
         },
         "production": {
-          "buildTarget": "org:build:production"
+          "buildTarget": "watch-ui:build:production"
         }
       }
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/org"],
+      "outputs": ["coverage/watch-ui"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "coverage/org"
+        "reportsDirectory": "coverage/watch-ui"
       }
     },
     "lint": {
@@ -70,7 +70,7 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "org:build"
+        "buildTarget": "watch-ui:build"
       }
     }
   },
